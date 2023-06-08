@@ -1,7 +1,3 @@
----
-
-
----
 
 <h2 id="python-api-get-and-post-examples">Python API GET and POST Examples</h2>
 <p><em>Athor: Islom Mamatov</em></p>
