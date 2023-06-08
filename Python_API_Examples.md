@@ -82,4 +82,24 @@ new_post <span class="token operator">=</span> response<span class="token punctu
 </code></pre>
 <p>The above code sends a POST request to the JSONPlaceholder API’s <code>/posts</code> endpoint with a JSON payload containing the title, body, and userId of the new post. The response contains the newly created post, which is then printed to the console.</p>
 <p>Remember to refer to the API documentation for specific details on the endpoints, request parameters, and data formats for the APIs you are working with.</p>
+<p><strong>Here’s an example using a token for authentication with the GitHub API:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> requests
+
+url <span class="token operator">=</span> <span class="token string">'https://api.github.com/user/repos'</span>
+token <span class="token operator">=</span> <span class="token string">'YOUR_GITHUB_TOKEN'</span>
+
+headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'Authorization'</span><span class="token punctuation">:</span> f<span class="token string">'Token {token}'</span>
+<span class="token punctuation">}</span>
+
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+repos <span class="token operator">=</span> response<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> repo <span class="token keyword">in</span> repos<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>repo<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>In the code above, we’re making a GET request to the GitHub API to fetch the repositories of the authenticated user. Replace <code>'YOUR_GITHUB_TOKEN'</code> with your actual GitHub personal access token.</p>
+<p>We set the token as the value for the <code>Authorization</code> header in the request headers. This header is required for authentication with the GitHub API, and the token is prefixed with the word “Token” before passing it.</p>
+<p>The response contains a JSON array of repositories, which we iterate over and print the names of the repositories.</p>
+<p>Make sure to generate and use your own personal access token with the necessary permissions when working with authenticated APIs. The method and format for passing the token may vary depending on the specific API you are using, so consult the API documentation for the correct approach.</p>
 
