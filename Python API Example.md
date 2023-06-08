@@ -5,22 +5,22 @@
 
 <h2 id="python-api-get-and-post-examples">Python API GET and POST Examples</h2>
 <p><em>Athor: Islom Mamatov</em></p>
-<p>Certainly! I can guide you through the process of working with APIs in Python. Here’s a step-by-step tutorial to help you get started:</p>
-<p>Step 1: Understand APIs<br>
+<p><strong>Here’s a step-by-step tutorial to help you get started:</strong></p>
+<p><strong>Step 1: Understand APIs</strong><br>
 An API (Application Programming Interface) allows different software applications to communicate and interact with each other. APIs provide a set of rules and protocols for requesting and exchanging data between systems.</p>
-<p>Step 2: Choose an API<br>
+<p><strong>Step 2: Choose an API</strong><br>
 Decide which API you want to work with. There are various APIs available for different purposes such as weather data, social media integration, financial data, etc. For this tutorial, let’s use the OpenWeatherMap API, which provides weather-related information.</p>
-<p>Step 3: Get an API Key<br>
+<p><strong>Step 3: Get an API Key</strong><br>
 Many APIs require an API key for authentication and tracking usage. Sign up on the API provider’s website (OpenWeatherMap in this case) and obtain an API key. Make sure to keep your API key secure and avoid sharing it publicly.</p>
-<p>Step 4: Install Requests Library<br>
+<p><strong>Step 4: Install Requests Library</strong><br>
 The Requests library is widely used for making HTTP requests in Python. Install it by running the following command in your terminal:</p>
 <pre><code>pip install requests
 </code></pre>
-<p>Step 5: Import Required Libraries<br>
+<p><strong>Step 5: Import Required Libraries</strong><br>
 In your Python script, import the necessary libraries:</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> requests
 </code></pre>
-<p>Step 6: Make API Requests<br>
+<p><strong>Step 6: Make API Requests</strong><br>
 Use the <code>requests</code> library to send HTTP requests to the API. Here’s an example that retrieves the current weather for a specific city using the OpenWeatherMap API:</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> requests
 
